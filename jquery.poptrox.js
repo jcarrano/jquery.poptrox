@@ -68,7 +68,8 @@
 					popupNavPreviousSelector:		'.nav-previous',			// (Advanced) Popup Nav Previous selector
 					popupNavNextSelector:			'.nav-next',				// (Advanced) Popup Nav Next selector
 					onPopupClose:					null,						// Called when popup closes
-					onPopupOpen:					null						// Called when popup opens
+					onPopupOpen:					null,						// Called when popup opens
+					videoAutoplay:					false						// If true, set the autoplay attribute on <video> tags.
 
 				}, options);
 
@@ -438,7 +439,7 @@
 							else
 								$x.attr('src', x.src);
 
-							if (x.type != 'image') {
+							if (x.type != 'image' && x.type != 'video') {
 
 								var xwidth, xheight;
 
@@ -823,6 +824,15 @@
 									x.width = "640";
 									x.height = "360";
 								}
+
+								break;
+
+							case 'video':
+								x.object = $('<video src="" alt="" style="vertical-align:bottom" controls="true" loop="true" />');
+								x.object.attr("autoplay", settings.videoAutoplay);
+
+								x.width = a.attr('width');
+								x.height = a.attr('height');
 
 								break;
 

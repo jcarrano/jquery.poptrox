@@ -113,6 +113,16 @@ The `data-poptrox` attribute breaks down like this:
 - `type`: The type (eg. `youtube`)
 - `(width)x(height)`: An optional width and height for the popup (eg. `800x400`)
 
+### Videos via `<video>` tag
+
+- Type: `video`
+- The setting `videoAutoplay` sets the value of the `autoplay` attribute.
+- Example
+
+```html
+<a href="videofile.mp4" data-poptrox="video"><img src="path/to/thumbnail.jpg" /></a>
+```
+
 ### YouTube Videos
 
 - Link format: `http://youtu.be/xxxxxxxxxxx` (found via the "Share" link)
@@ -155,7 +165,7 @@ The `data-poptrox` attribute breaks down like this:
 
 ### Soundcloud Tracks
 
-- Link format: `https://api.soundcloud.com/tracks/xxxxxxxx` (found via the "Share" button 
+- Link format: `https://api.soundcloud.com/tracks/xxxxxxxx` (found via the "Share" button
 under "Widget Code" or "WordPress Code")
 - Type: `soundcloud`
 - Example:
@@ -229,7 +239,7 @@ foo.poptrox({
 	usePopupNav:				false,			// If true, show (and use) popup navigation
 	usePopupDefaultStyling:		true,			// If true, default popup styling will be applied
 												// (background color, text color, etc)
-	popupBackgroundColor:		'#FFFFFF',		// (Default Style) Popup background color (when 
+	popupBackgroundColor:		'#FFFFFF',		// (Default Style) Popup background color (when
 												// usePopupStyling = true)
 	popupTextColor:				'#000000',		// (Default Style) Popup text color (when
 												// usePopupStyling = true)
@@ -248,7 +258,7 @@ foo.poptrox({
 	popupCloserText:			'&#215;',		// Popup closer text
 	popupLoaderText:			'&bull;&bull;',	// Popup loader text
 	popupClass:					'poptrox-popup',// Popup class
-	popupSelector:				null,			// (Advanced) Popup selector (use this if you 
+	popupSelector:				null,			// (Advanced) Popup selector (use this if you
 												// want to replace the built-in popup)
 	popupLoaderSelector:		'.loader',		// (Advanced) Popup Loader selector
 	popupCloserSelector:		'.closer',		// (Advanced) Popup Closer selector
@@ -264,7 +274,7 @@ foo.poptrox({
 
 jquery.poptrox.js is released under the MIT license.
 
-Copyright © n33
+Copyright ï¿½ n33
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
